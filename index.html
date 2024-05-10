@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Di chuyển bằng nút ấn</title>
+</head>
+<body>
+<img src="Kuromi.jpg" alt="" style="width: 100px; height: 120px; position: absolute; top: 100px; left: 100px" id="ku">
+<button onclick="goLeft()">Left</button>
+<button onclick="goRight()">Right</button>
+<button onclick="goUp()">Up</button>
+<button onclick="goDown()">Down</button>
+<script>
+    let kuromi = document.getElementById('ku');
+
+    function goLeft() {
+        kuromi.style.left = parseInt(kuromi.style.left) - 20 + 'px';
+    }
+
+    function goRight() {
+        kuromi.style.left = parseInt(kuromi.style.left) + 20 + 'px';
+    }
+
+    function goUp() {
+        kuromi.style.top = parseInt(kuromi.style.top) - 20 + 'px';
+    }
+
+    function goDown() {
+        kuromi.style.top = parseInt(kuromi.style.top) + 20 + 'px';
+    }
+</script>
+</body>
+</html>
