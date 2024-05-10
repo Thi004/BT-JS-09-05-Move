@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Move Left-Right</title>
+</head>
+<body>
+Đi qua lại từ trái qua phải
+<img src="ball.jpg" alt="" style=" border-radius: 50%; width: 200px; height: 150px; position: absolute; top: 100px; left: 100px" id="b">
+<script>
+    let ball = document.getElementById('b');
+    let w = 3;
+    setInterval(() => {
+        ball.style.left = parseInt(ball.style.left) + w +'px';
+        if(parseInt(ball.style.left) > window.innerWidth - ball.width) {
+            w = -3;
+        } else if (parseInt(ball.style.left) < 0) {
+            w = 3;
+        }
+    },1)
+</script>
+</body>
+</html>
